@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{442aadc0-929f-4c1f-948c-5f2e860b0026}</ProjectGuid>
-    <RootNamespace>Ckorea</RootNamespace>
+    <ProjectGuid>{44a9f1c9-d3c7-47f7-90d1-86fd5b0c2400}</ProjectGuid>
+    <RootNamespace>CAsign</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cproject01.c" />
-    <ClCompile Include="Cproject02.c" />
-    <ClCompile Include="Cproject03.c" />
-    <ClCompile Include="Cproject04.c" />
-    <ClCompile Include="Cproject05.c" />
+    <ClCompile Include="06.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

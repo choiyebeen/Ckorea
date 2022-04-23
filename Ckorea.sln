@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ckorea", "Ckorea\Ckorea.vcxproj", "{442AADC0-929F-4C1F-948C-5F2E860B0026}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CAsign", "CAsign\CAsign.vcxproj", "{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{442AADC0-929F-4C1F-948C-5F2E860B0026}.Release|x64.Build.0 = Release|x64
 		{442AADC0-929F-4C1F-948C-5F2E860B0026}.Release|x86.ActiveCfg = Release|Win32
 		{442AADC0-929F-4C1F-948C-5F2E860B0026}.Release|x86.Build.0 = Release|Win32
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Debug|x64.ActiveCfg = Debug|x64
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Debug|x64.Build.0 = Debug|x64
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Debug|x86.ActiveCfg = Debug|Win32
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Debug|x86.Build.0 = Debug|Win32
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Release|x64.ActiveCfg = Release|x64
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Release|x64.Build.0 = Release|x64
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Release|x86.ActiveCfg = Release|Win32
+		{44A9F1C9-D3C7-47F7-90D1-86FD5B0C2400}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
