@@ -14,7 +14,7 @@ void main() {
 	(age >= 12 && height >= 120) ? printf("탑승가능") : printf("탑승 불가능");
 
 
-
+	//
 
 
 	/*printf("당신의 나이는 ");
