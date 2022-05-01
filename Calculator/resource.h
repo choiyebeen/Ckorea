@@ -14,13 +14,19 @@
 #define IDR_MAINFRAME                   128
 #define IDD_DIALOG1                     129
 #define IDC_NUM44                       1000
+#define IDC_NUM4                        1000
 #define IDC_NUM11                       1001
+#define IDC_NUM1                        1001
 #define IDC_NUM22                       1002
+#define IDC_NUM2                        1002
 #define IDC_NUM33                       1003
+#define IDC_NUM3                        1003
 #define IDC_NUM66                       1004
+#define IDC_NUM6                        1004
 #define IDC_NUM0                        1005
 #define IDC_SHOW1                       1006
 #define IDC_NUM55                       1009
+#define IDC_NUM5                        1009
 #define IDC_NUM9                        1010
 #define IDC_minus                       1011
 #define IDC_x                           1012
@@ -29,6 +35,7 @@
 #define IDC_CAL                         1013
 #define IDC_NUM7                        1014
 #define IDC_NUM88                       1015
+#define IDC_NUM8                        1015
 #define IDC_NUMnanugi                   1016
 #define IDC_plus                        1017
 #define IDC_STATIC                      -1

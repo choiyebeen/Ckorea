@@ -1,5 +1,5 @@
 #include<stdio.h>
-void main() {
+void main19() {
 
 	int num = 2;
 	switch (num)
