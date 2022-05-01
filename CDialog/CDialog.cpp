@@ -17,7 +17,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG1),NULL, DigProc);
         return 0;
 }
-
+//
 
 
 
