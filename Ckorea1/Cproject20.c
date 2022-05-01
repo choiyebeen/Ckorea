@@ -1,17 +1,17 @@
 #include<stdio.h>
-void main() {
+void main20() {
 	//조건문 if~else if~else
 	int age = 20;
-	if (age > 19) {
-		printf("나이는 %d이고 성인이다");
-	}
-	else if (age > 13) {
-		printf("나이는 %d이고 미자이다.");
-	}
-	else {
-		printf("나이는 %d이고 어린이다.");
-	}
-
+	//if (age > 19) {
+	//	printf("나이는 %d이고 성인이다");
+	//}
+	//else if (age > 13) {
+	//	printf("나이는 %d이고 미자이다.");
+	//}
+	//else {
+	//	printf("나이는 %d이고 어린이다.");
+	//}
+	
 	// 조건문 switch~case~break
 	switch (age)
 	{
