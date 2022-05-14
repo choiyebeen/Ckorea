@@ -1,6 +1,5 @@
 #include<stdio.h>
-void main() {
-
+void main21()
 	//제어문 : 조건문, 반복문 2개가 있다.
 	// 반복횟수를 지정하기 위해서는 플래그가 필요하다.
 	//int i = 0;
