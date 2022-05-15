@@ -6,10 +6,28 @@
 
 // 전역 변수:
 HINSTANCE hInst;    // 현재 인스턴스입니다.
-int num1=-1, num2=0;
-int cal =0;
+int num1=-1, num2=0, current_num=0;
+int cal = 0, reset = 0;
 
+void operation(int a_cal) {
+    reset = 1;
+    cal = a_cal;
+}
 
+void operation2(int a_num, HWND hDlg) {
+    if (reset != 0) {
+        reset = 0;
+        SetDlgItemInt(hDlg, IDC_SHOW1, 0, TRUE);
+    }
+    current_num = GetDlgItemInt(hDlg, IDC_SHOW1, NULL, TRUE);
+    SetDlgItemInt(hDlg, IDC_SHOW1, current_num * 10 + a_num, TRUE);
+    if (cal != 0) {
+        num2 = current_num * 10+a_num;
+    }
+    else {
+        num1 = current_num * 10 + a_num;
+    }
+}
 
 INT_PTR CALLBACK    DlgProc(HWND, UINT, WPARAM, LPARAM);
 
@@ -44,24 +62,28 @@ INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
                 num1 = -1;
                 num2 = 0;
                 cal = 0;
+                reset = 1;
             }
             if (cal == 2) {
                 SetDlgItemInt(hDlg, IDC_SHOW1, num1 - num2, TRUE);
                 num1 = -1;
                 num2 = 0;
                 cal = 0;
+                reset = 1;
             }
             if (cal == 3) {
                 SetDlgItemInt(hDlg, IDC_SHOW1, num1 * num2, TRUE);
                 num1 = -1;
                 num2 = 0;
                 cal = 0;
+                reset = 1;
             }
-            if (cal == 4) {
+            if (cal == 4 && num2 != 0) {
                 SetDlgItemInt(hDlg, IDC_SHOW1, num1 / num2, TRUE);
                 num1 = -1;
                 num2 = 0;
                 cal = 0;
+                reset = 1;
             }
         }
         switch (LOWORD(wParam))
@@ -76,101 +98,76 @@ INT_PTR CALLBACK DlgProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
             }
             break;
         case IDC_NUM1:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 1, TRUE);
+            if (reset != 0) {
+                reset = 0;
+                SetDlgItemInt(hDlg, IDC_SHOW1, 0, TRUE);
+            }
+            current_num = GetDlgItemInt(hDlg, IDC_SHOW1, NULL, TRUE);
+            SetDlgItemInt(hDlg, IDC_SHOW1, current_num * 10 + 1, TRUE);
             if (cal != 0) {
-                num2 = 1;
+                num2 = current_num * 10 + 1;
             }
             else {
-                num1 = 1;
+                num1 = current_num * 10 + 1;
             }
             break;
         case IDC_NUM2:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 2, TRUE);
-            if (cal != 0) {
-                num2 = 2;
-            }
-            else {
-                num1 = 2;
-            }
+            operation2(2, hDlg);
             break;
         case IDC_NUM3:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 3, TRUE);
-            if (cal != 0) {
-                num2 = 3;
-            }
-            else {
-                num1 = 3;
-            }
+            operation2(3, hDlg);
             break;
         case IDC_NUM4:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 4, TRUE);
-            if (cal != 0) {
-                num2 = 4;
-            }
-            else {
-                num1 = 4;
-            }
+            operation2(4, hDlg);
             break;
         case IDC_NUM5:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 5, TRUE);
-            if (cal != 0) {
-                num2 = 5;
-            }
-            else {
-                num1 = 5;
-            }
+            operation2(5, hDlg);
             break;
         case IDC_NUM6:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 6, TRUE);
-            if (cal != 0) {
-                num2 = 6;
-            }
-            else {
-                num1 = 6;
-            }
+            operation2(6, hDlg);
             break;
         case IDC_NUM7:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 7, TRUE);
-            if (cal != 0) {
-                num2 = 7;
-            }
-            else {
-                num1 = 7;
-            }
+            operation2(7, hDlg);
             break;
         case IDC_NUM8:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 8, TRUE);
-            if (cal != 0) {
-                num2 = 8;
-            }
-            else {
-                num1 = 8;
-            }
+            operation2(8, hDlg);
             break;
         case IDC_NUM9:
-            SetDlgItemInt(hDlg, IDC_SHOW1, 9, TRUE);
-            if (cal != 0) {
-                num2 = 9;
-            }
-            else {
-                num1 = 9;
-            }
+            operation2(9, hDlg);
             break;
 
         case IDC_plus:
-            cal = 1;
+            operation(1);
             break;
         case IDC_minus:
-            cal = 2;
+            operation(2);
             break;
         case IDC_NUMnanugi:
-            cal = 3;
+            operation(3);
             break;
         case IDC_x:
-            cal = 4;
+            operation(4);
             break;
 
+        case IDC_CLEAR:
+            SetDlgItemInt(hDlg, IDC_SHOW1, 0, TRUE);
+            num1 = -1;
+            num2 = 0;
+            cal = 0;
+            reset = 1;
+            break;
 
+        case IDC_BACK1:
+            int origin = GetDlgItemInt(hDlg, IDC_SHOW1, NULL, TRUE);
+            SetDlgItemInt(hDlg, IDC_SHOW1, origin / 10, TRUE);
+            if (cal != 0) {
+                num2 = origin / 10;
+
+            }
+            else {
+                num1 = origin / 10;
+            }
+            break;
         }
         break;
     }

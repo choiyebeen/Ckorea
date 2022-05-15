@@ -25,6 +25,9 @@
 #define IDC_NUM6                        1004
 #define IDC_NUM0                        1005
 #define IDC_SHOW1                       1006
+#define IDC_CLEAR                       1007
+#define IDC_NULL                        1008
+#define IDC_BACK1                       1008
 #define IDC_NUM55                       1009
 #define IDC_NUM5                        1009
 #define IDC_NUM9                        1010
@@ -34,7 +37,6 @@
 #define IDC_equel                       1013
 #define IDC_CAL                         1013
 #define IDC_NUM7                        1014
-#define IDC_NUM88                       1015
 #define IDC_NUM8                        1015
 #define IDC_NUMnanugi                   1016
 #define IDC_plus                        1017
@@ -47,7 +49,7 @@
 #define _APS_NO_MFC                     1
 #define _APS_NEXT_RESOURCE_VALUE        130
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1007
+#define _APS_NEXT_CONTROL_VALUE         1009
 #define _APS_NEXT_SYMED_VALUE           110
 #endif
 #endif
