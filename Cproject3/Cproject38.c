@@ -55,5 +55,5 @@ int main() {
 		printf("가격 입력 >>");
 		scanf_s("%d", &price);
 		(*cafe).menu_price[num - 1] = price;
-	
+	//최종 끝..
 	}
