@@ -143,6 +143,13 @@
     <ClCompile Include="Cproject29.c" />
     <ClCompile Include="Cproject30.c" />
     <ClCompile Include="Cproject31.c" />
+    <ClCompile Include="Cproject32.c" />
+    <ClCompile Include="Cproject33.c" />
+    <ClCompile Include="Cproject34.c" />
+    <ClCompile Include="Cproject35.c" />
+    <ClCompile Include="Cproject36.c" />
+    <ClCompile Include="Cproject37.c" />
+    <ClCompile Include="Cproject38.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cproject29.h" />
